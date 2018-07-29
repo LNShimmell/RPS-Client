@@ -1,0 +1,44 @@
+
+<div class="container">
+<table class="table table-sm table-bordered">
+
+    <thead style="text-align: center; background-color: azure;" >
+       <tr><td style="text-align: center; background-color: azure;" colspan="6"><h5>Create Vendor</h5></td></tr> 
+      
+      
+    </thead>
+  <tbody >
+     
+      <tr>
+        <td >Vendor</td><td><input type="text" [(ngModel)]="vendor.Name"></td>
+      </tr>
+      <tr>
+        <td >Code</td><td><input type="text" [(ngModel)]="vendor.Code"></td>     
+      </tr>
+      <tr>
+        <td >Phone</td><td><input type="number"   [(ngModel)]="vendor.Phone"></td>
+      </tr>
+      <tr> 
+        <td >Email</td><td><input type="email"   [(ngModel)]="vendor.Email"></td>
+      </tr>
+      <tr>  
+        <td>Address</td><td><input type="text" [(ngModel)]="vendor.Address"></td>
+      </tr>
+      <tr>
+        <td>City</td><td><input type="text" minlength="3" maxlength="20" [(ngModel)]="vendor.City"></td>
+      </tr>
+      <tr>
+        <td>State</td><td><select type="text"   [(ngModel)]="vendor.State"><option *ngFor="let State of StateCodes" [ngValue]="State">{{State}}</option></select></td>
+      </tr>
+      <tr>
+        <td>Zip Code</td><td><input type="number" minlength="10" maxlength="15" placeholder="12345" [(ngModel)]="vendor.Zip"></td>
+      </tr>
+      <tr>
+        <td>PreApproved</td><td><input type="checkbox" [(ngModel)]="vendor.IsPreapproved"></td>
+      </tr>
+   
+    <tr><td colspan="6"> <button class="btn btn-success" (click)="create()">Create</button><button class="btn btn-success" routerLink="../list">Back</button> </td></tr>
+    </tbody>
+  </table>
+</div>
+  

@@ -1,0 +1,18 @@
+/* [ProductDisplay] */
+.FeaturedItemsRating {  }
+.FeaturedItemsDetails {  }
+.FeaturedItemsPriceHR {  }
+.FeaturedItemsPriceAlignment {  }
+.FeaturedItemsBuyMoreLinkHR {  }
+.FeaturedItemsThumbnail {  }
+.PriceLabels {  }
+.ProductDisplayBuyNowLink { font-size:7pt;text-decoration:none }
+.ProductDisplayMoreLink { font-size:7pt;text-decoration:none }
+.ProductDisplayStatus { font-size:7pt;text-decoration:none }
+.ProductDisplayBuyMoreArea { float: right; padding-right: 5px; display: inline; }
+/* [/ProductDisplay] */
+
+/* [SmallShoppingCart] */
+.SmallCartItemLink { text-decoration: underline; }
+.SmallCartQtyTextbox { border-color: #333333; border-width: 1px; border-style: Solid; font-size: 8pt; width: 30px; }
+/* [/SmallShoppingCart] */

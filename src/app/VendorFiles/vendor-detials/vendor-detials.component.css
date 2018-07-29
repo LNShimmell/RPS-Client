@@ -1,0 +1,18 @@
+button{
+    margin-right: 1%;
+}
+
+tr{
+    background-color: azure;
+}
+
+input:hover{
+    background-color: rgb(248, 250, 112);
+}
+
+option{
+    background-color: rgb(248, 250, 112);
+}
+select:hover{
+    background-color: rgb(248, 250, 112);
+}

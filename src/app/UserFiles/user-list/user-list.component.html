@@ -1,0 +1,18 @@
+<button class="btn btn-success" routerLink="../create">New User</button>
+<table class="table" >
+  <thead class="thead-light"> 
+  <tr>
+    <th>UserName <img  src="../../../assets/sort.png" width="15px" (click)="sort('UserName')"></th>
+    <th>Name <img  src="../../../assets/sort.png" width="15px" (click)="sort('Lname')"></th>
+    <th>Admin <img  src="../../../assets/admin.png" width="15px" (click)="sort('IsAdmin')"></th>
+    <th>Reviewer <img  src="../../../assets/if_search_173095.png" width="15px" (click)="sort('IsReviewer')"></th>
+    <th>Details/Edit</th>
+  </tr>
+  </thead>
+  <tbody >
+    <tr  *ngFor="let user of users| sort:sortProperty:sortOrder">
+     <td>{{user.UserName}}</td> <td>{{user.Fname}} {{user.Lname}}</td><td>{{user.IsAdmin}}</td><td>{{user.IsReviewer}}</td><td><a routerLink="../details/{{user.Id}}">More</a></td>
+    </tr>
+
+  </tbody>
+</table> 

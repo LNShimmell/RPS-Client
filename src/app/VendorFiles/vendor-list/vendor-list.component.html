@@ -1,0 +1,19 @@
+<button class="btn btn-success" routerLink="../create">New Vendor</button>
+<table class="table" >
+  <thead class="thead-light"> 
+  <tr>
+    <th>Vendor <img  src="../../../assets/sort.png" width="15px" (click)="sort('Name')"></th>
+    <th>Code<img  src="../../../assets/sort.png" width="15px" (click)="sort('Code')"></th>
+    <th>PreApproved <img  src="../../../assets/admin.png" width="15px" (click)="sort('IsPreapproved')"></th>
+    <th>Details/Edit</th>
+  </tr>
+  </thead>
+  <tbody >
+    <tr  *ngFor="let vendor of vendors| sort:sortProperty:sortOrder">
+     <td>{{vendor.Name}}</td> <td>{{vendor.Code}}</td> <td>{{vendor.IsPreapproved}}</td><td><a routerLink="../details/{{vendor.Id}}">More</a></td>
+    </tr>
+
+  </tbody>
+</table> 
+
+                                                                    

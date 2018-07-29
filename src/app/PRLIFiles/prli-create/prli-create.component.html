@@ -1,0 +1,21 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      New Purchase
+    </thead>
+    <tbody>
+    <tr>
+      <td>User</td><td> <select  [(ngModel)]="prli.PurchaseRequestId" ><option *ngFor="let pr of pRequests" [ngValue]="pr.Id"> {{pr.Description}} {{pr.User.Fname}} {{pr.User.Lname}}</option></select></td>
+    </tr>
+
+    <tr>
+      <td>Product</td><td> <select [(ngModel)]="prli.ProductId"> <option *ngFor="let product of products" [ngValue]="product.ID">{{product.Name}} {{product.Price | currency:'USD':true:'2.2-4'}}</option></select></td>
+    </tr>
+    <tr>
+      <td>Quantity</td><td><input type="number" [(ngModel)]="prli.Quantity" ></td>
+    </tr>
+    <tr><td colspan="2"><button class="btn btn-success btn-sm" (click)="create()">Create</button><button class="btn btn-sm btn-success" style="float:right;" routerLink="../list">Back</button></td></tr>
+  </tbody>
+  </table>
+
+</div>

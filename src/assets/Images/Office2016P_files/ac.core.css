@@ -1,0 +1,92 @@
+﻿/* Product Details Discount Display */
+.ProductDetailsDiscountList {
+     font-weight: bold; 
+     font-size: 0.6em; 
+     margin: 0; 
+     padding: 0; 
+     float: right;
+}
+
+.ProductDetailsDiscountList > li { 
+     list-style-type: none; 
+     float: left; 
+     padding: 5px; 
+     color: #FFF; 
+     background-color: #8F4646; 
+     margin: 2px; 
+}
+
+.CategoryDiscountList {
+     font-weight: bold; 
+     font-size: 0.8em; 
+     margin: 7px 0 0 0; 
+     padding: 0; 
+     float: left;
+}
+
+.CategoryDiscountList > li { 
+     list-style-type: none; 
+     float: left; 
+     padding: 5px; 
+     color: #FFF; 
+     background-color: #8F4646; 
+     margin: 2px; 
+}
+
+.backgroundPopup{  
+	display:none;
+	position:fixed;
+	_position:absolute; /* hack for internet explorer 6*/  
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	background:#000;
+}  
+.popupHolder{
+	display:none;
+	position:fixed;
+	_position:absolute; /* hack for internet explorer 6*/  
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+    z-index: 1050;
+}
+.popup{
+	display:none;
+	position:fixed;
+	_position:absolute; /* hack for internet explorer 6*/  
+	background:#FFFFFF;  
+	border:2px solid #cecece;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 20px #000;
+	-webkit-box-shadow: 0px 0px 20px #000;
+	-moz-box-shadow: 0px 0px 20px #000;
+	z-index:1;  
+	padding:12px;  
+	font-size:13px;  
+}  
+.popup h1{  
+	text-align:left;  
+	color:#6D7B8D;
+	font-size:11px;
+	border-bottom:1px dotted #D3D3D3;  
+	padding-bottom:2px;  
+	margin-bottom:20px;  
+}
+  
+#popupClose{  
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top: -20px;
+	margin-right: -20px;
+	height: 50px;
+	width: 50px;
+	border: 0 none;
+	cursor:pointer;
+	background-image: url(/store/i/close.png); 
+}

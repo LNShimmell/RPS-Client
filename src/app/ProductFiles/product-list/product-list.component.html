@@ -1,0 +1,18 @@
+<button class="btn btn-success" routerLink="../create">New Product</button>
+<table class="table" >
+  <thead class="thead-light"> 
+  <tr>
+    <th>Product <img  src="../../../assets/sort.png" width="15px" (click)="sort('Name')"></th>
+    <th>Vendor<img  src="../../../assets/sort.png" width="15px" (click)="sort('Vendor.Name')"></th>
+    <th>Price <img  src="../../../assets/admin.png" width="15px" (click)="sort('Price')"></th>
+    <th> Photo</th>
+    <th>Details/Edit</th>
+  </tr>
+  </thead>
+  <tbody >
+    <tr  *ngFor="let product of products| sort:sortProperty:sortOrder">
+     <td>{{product.Name}}</td> <td>{{product.Vendor.Name}}</td> <td>${{product.Price}}</td><td><img src="../../../assets/Images/{{product.Photopath}}" class="fit" alt="product"></td><td><a  routerLink="../details/{{product.ID}}">More</a> | <a *ngIf="loggedInUser.IsAdmin" routerLink="../edit/{{product.ID}}">Edit</a></td>
+    </tr>
+
+  </tbody>
+</table> 

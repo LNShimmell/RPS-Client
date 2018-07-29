@@ -1,0 +1,18 @@
+<button class="btn btn-success btn-sm" routerLink="../create">New</button>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <th> User</th> <th>Description</th> <th>Total</th> <th style="text-align: right;">More</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pr of pRequests">
+                <td *ngIf="pr.Active" >{{pr.User.Lname}}, {{pr.User.Fname}}</td>
+                <td *ngIf="pr.Active" >{{pr.Description}}</td>
+                <td *ngIf="pr.Active" >{{pr.Total | currency:'USD':true:'2.2-4'}}</td>
+                <td  *ngIf="pr.Active" style="text-align: right"><a routerLink="../details/{{pr.Id}}">Details</a> |  <a  routerLink="../edit/{{pr.Id}}">Edit</a></td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>

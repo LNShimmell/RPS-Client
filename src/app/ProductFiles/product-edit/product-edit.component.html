@@ -1,0 +1,35 @@
+<div class="container">
+    <table class="table table-sm table-bordered">
+        <thead style="text-align: center; background-color: azure;" >
+           <tr><td style="text-align: center; background-color: azure;" colspan="6"><h5>Create Product</h5></td></tr> 
+        </thead>
+      <tbody >
+          <tr>
+            <td >Vendor</td><td>
+              <select [(ngModel)]="product.VendorID">
+                  <option *ngFor="let vendor of vendors" [ngValue]="vendor.Id">{{vendor.Name}}</option>
+              </select>
+            </td>     
+          </tr> 
+          <tr>
+              <td >Product</td><td><input type="text" [(ngModel)]="product.Name"></td>
+          </tr>
+          <tr>
+            <td >Price</td><td><input type="number"   [(ngModel)]="product.Price"></td>
+          </tr>
+          <tr> 
+            <td >Unit Qty</td><td><input type="text"   [(ngModel)]="product.Unit"></td>
+          </tr>
+          <tr>  
+            <td>Photo</td><td><input type="text" [(ngModel)]="product.Photopath"></td>
+          </tr>
+          <tr>
+              <td>Part Number</td><td><input type="text" [(ngModel)]="product.Partnum"></td>
+            </tr>
+          <tr>
+            <td>Active</td><td><input type="checkbox" [(ngModel)]="product.Active"></td>
+          </tr>
+        <tr><td colspan="6"> <button class="btn btn-warning" (click)="edit()">Edit</button><button class="btn btn-success" routerLink="../../list">Back</button> </td></tr>
+        </tbody>
+      </table>
+    </div>

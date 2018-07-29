@@ -1,0 +1,20 @@
+<table class="table table-sm table-bordered">
+
+    <thead style="text-align: center; background-color: azure;" >
+       <tr><td style="text-align: center; background-color: azure;" colspan="6"><h5>Create User</h5></td></tr> 
+      
+      <tr><th> First Name</th> <th> Last Name</th> <th> User Name</th> <th>Password</th><th>Phone</th><th>Email</th></tr>
+    </thead>
+  <tbody >
+     
+      <tr>
+        <td style="text-align: center; background-color: azure;"><input type="text" [(ngModel)]="user.Fname"></td>
+        <td style="text-align: center; background-color: azure;"><input type="text" [(ngModel)]="user.Lname"></td>     
+        <td style="text-align: center; background-color: azure;"><input type="text"   [(ngModel)]="user.UserName"></td>
+        <td style="text-align: center; background-color: azure;"><input type="password" [(ngModel)]="user.Password"></td>
+        <td style="text-align: center; background-color: azure;"><input type="number" minlength="10" maxlength="15" placeholder="5555551234" [(ngModel)]="user.Phone"></td>
+        <td style="text-align: center; background-color: azure;"><input type="email"   [(ngModel)]="user.Email"></td> 
+    </tr>
+    <tr><td style="text-align: center; background-color: azure;" colspan="6"> <button class="btn btn-success" (click)="create()">Create</button><button class="btn btn-success" routerLink="../list">Back</button> </td></tr>
+    </tbody>
+  </table>

@@ -1,0 +1,43 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <th style="text-align: center;" colspan="2">Purchase Request</th>
+      
+    </thead>
+    <tr>
+      <td>Description</td><td><input  [(ngModel)]="pr.Description" ></td>
+    </tr>
+    <tr>
+      <td>Rejection Reason</td><td><input  [(ngModel)]="pr.RejectionReason" ></td>
+    </tr>
+    <tr>
+      <td>DeliveryMode</td><td><input  [(ngModel)]="pr.DeliveryMode" ></td>
+    </tr>
+    <tr>
+      <td>Status</td><td><input  [(ngModel)]="pr.Status" readonly ></td>
+    </tr>
+    <tr>
+      <td>Total</td><td><input  [(ngModel)]="pr.Total" readonly ></td>
+    </tr>
+    <tr>
+      <td>Active</td><td><input type="checkbox" [(ngModel)]="pr.Active" ></td>
+    </tr>
+    <tr>
+      <td>Justification</td><td><input type="text" [(ngModel)]="pr.Description"></td>
+    </tr>
+    <tr><td colspan="2"><button class="btn btn-warning btn-sm" (click)="edit()">Edit</button><button class="btn btn-sm btn-success" style="float:right;" routerLink="../list">Back</button></td></tr>
+    
+  </table>
+   <table class="table">
+    <thead>
+      <tr><th style="text-align: center;" colspan="4">Cart</th></tr>
+      <tr><th>Product</th><th>Price</th><th>Quantity</th><th>More</th></tr>
+    </thead>
+    <tr *ngFor="let prli of prlis">
+      <td>{{prli.Products.Name}}</td><td>{{prli.Products.Price| currency}}</td><td>{{prli.Quantity}}</td><td><a routerLink="../../">edit</a></td>
+    </tr>
+    <tr *ngIf="(prlis.length>0)" style="border-top: black solid 2px">
+      <td > <strong>Total</strong></td><td><strong>{{Total| currency}}</strong></td><td colspan="2"></td>
+    </tr>
+  </table> 
+</div>
