@@ -26,6 +26,7 @@ export class VendorDetialsComponent implements OnInit {
   costs: number [] = [];
   array = [];
   total: number= 0;
+  object: object = null;
  
 
   constructor(private VendorSvc: VendorService, private route: ActivatedRoute) { }
@@ -76,6 +77,11 @@ remove(){
           this.array.push(object);
       }
       console.log(this.array)
+      this.VendorSvc.returnVendorOrder(Id)
+      .subscribe(respon =>{
+        this.object
+        console.log(this.object);
+      })
       // console.log(this.vendorOrder);
       // console.log(this.venProducts)
       // console.log(this.names)

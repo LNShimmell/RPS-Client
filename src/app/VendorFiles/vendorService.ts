@@ -33,6 +33,9 @@ export class VendorService {
   returnTotal(Id: number) :Observable<JsonResponse>{
     return this.http.get(this.url+ "MakeVendorRequest/" + Id) as Observable<JsonResponse>;
   }
+  returnVendorOrder(Id: number) :Observable<JsonResponse>{
+    return this.http.get(this.url + "VendorOrder/" + Id) as Observable<JsonResponse>;
+  }
 
   constructor(private http: HttpClient) { }
 }
